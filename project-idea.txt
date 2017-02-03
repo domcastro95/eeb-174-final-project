@@ -1,0 +1,4 @@
+1. I am interested in the extinction on the fossil mammal of Strigiformes (owls).
+2. I plan to use the occurances from the PBDP to reconstruct fossil ranges. I will be using fossile age and locality data to form my results of the different fossils recorded in my .csv file.
+This will help me visualize the results of the fossils in a more quantitative manner for students and civilians alike. 
+3. 
