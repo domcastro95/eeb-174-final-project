@@ -1,0 +1,102 @@
+---
+title: "EEB177_Project_graph"
+output: html_document
+---
+```{r}
+canis_dat <- read.csv("~/Desktop/eeb-177/eeb-174-final-project/Canis_Occurances_725_header.csv", header = TRUE)
+# we can look at the structure with str()
+str(canis_dat)
+
+# we can inspect the dimensions of a dataframe with dim()
+dim(canis_dat)
+
+# and we can peek at the first few lines with head()
+head(canis_dat)
+
+genus_canis <- canis_dat$accepted_name
+
+names(genus_canis) <- canis_dat$tag
+
+genus_canis[1:5]
+
+summary(genus_canis)
+
+```
+
+
+```{r}
+
+library(dplyr)
+library(ggplot2)
+
+## Assuming the data is in the file 'Types.csv'
+canis_dat <- read.csv("~/Desktop/eeb-177/eeb-174-final-project/Canis_Occurances_725_header.csv", header = TRUE)
+
+canis_dat_summary <-
+    canis_dat                   %>% # Pipe df into group_by
+    group_by(accepted_name)              %>% # grouping by 'type' column
+    summarise(name_count = n())     # calculate the name count for each group
+## 'canis_dat_summary' now contains the summary data for each 'type'
+canis_dat_summary
+
+
+
+### Two ways to plot using ggplot
+
+## (1) Plot pre summarized data: 'canis_dat_summary'.
+ggplot(canis_dat_summary, aes(accepted_name, name_count)) +
+geom_bar(stat = 'identity') + # stat='identity' is used for summarized data.
+#coord_flip(xlim = NULL) 
+coord_flip(expand = TRUE)
+#coord_flip(ylim = NULL)
+?coord_flip
+```
+
+```{r}
+early_interval_dat <- read.csv("~/Desktop/eeb-177/eeb-174-final-project/Canis_Occurances_725_header.csv", header = TRUE)
+# we can look at the structure with str()
+str(early_interval_dat)
+
+# we can inspect the dimensions of a dataframe with dim()
+dim(early_interval_dat)
+
+# and we can peek at the first few lines with head()
+head(early_interval_dat)
+
+genus_canis <- early_interval_dat$early_interval
+
+names(genus_canis) <- early_interval_dat$tag
+
+genus_canis[1:5]
+
+summary(genus_canis)
+```
+
+```{r}
+library(dplyr)
+library(ggplot2)
+
+## Assuming the data is in the file 'Types.csv'
+early_interval_dat <- read.csv("~/Desktop/eeb-177/eeb-174-final-project/Canis_Occurances_725_header.csv", header = TRUE)
+
+early_interval_dat_summary <-
+    canis_dat                   %>% # Pipe df into group_by
+    group_by(early_interval)              %>% # grouping by 'type' column
+    summarise(name_count = n())     # calculate the name count for each group
+## 'canis_dat_summary' now contains the summary data for each 'type'
+early_interval_dat_summary
+
+
+
+### Two ways to plot using ggplot
+
+## (1) Plot pre summarized data: 'canis_dat_summary'.
+ggplot(early_interval_dat_summary, aes(early_interval, name_count )) +
+geom_bar(stat = 'identity')  + # stat='identity' is used for summarized data.
+coord_flip(expand = TRUE) 
+
+
+
+```
+
+```
