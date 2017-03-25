@@ -1,0 +1,43 @@
+
+                           PyRate - 20170222
+
+           Bayesian estimation of speciation and extinction
+                  rates from fossil occurrence data        
+
+               Daniele Silvestro, Jan Schnitzler et al.
+                        pyrate.help@gmail.com
+
+
+
+
+The analysis includes 20 species (0 were excluded)
+Using Gamma priors on the birth-death rates (G_l[1.1,1.1], G_m[1.1,1.1]).
+
+
+DATA SUMMARY
+
+20 species included in the data set
+4 species have a single occurrence, 17 species are extant
+726 fossil occurrences (1 replicates), ranging from 22.681 (+/- 0.0) to 0.001 (+/- 0.0) Ma
+
+Taxon	FA	LA
+Canis	13.656	0.001	
+Canis_adustus	3.316	0.004	extant
+Canis_anthus	1.049	0.515	extant
+Canis_apolloniensis	1.659	1.659	extant
+Canis_armbrusteri	1.561	0.115	extant
+Canis_aureus	3.015	0.001	extant
+Canis_cedazoensis	1.255	1.255	extant
+Canis_dirus	2.373	0.012	extant
+Canis_edwardii	22.681	0.313	extant
+Canis_familiaris	1.944	0.002	extant
+Canis_ferox	8.855	1.864	extant
+Canis_latrans	4.103	0.003	extant
+Canis_lepophagus	4.948	0.031	extant
+Canis_lupus	3.433	0.002	extant
+Canis_mesomelas	5.242	0.007	extant
+Canis_proplatensis	1.966	1.966	
+Canis_(Pseudalopex)	1.268	0.03	extant
+Canis_rufus	4.037	0.062	extant
+Canis_thooides	4.273	4.273	extant
+Pseudalopex_gymnocercus	1.059	0.002	
